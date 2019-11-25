@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>My Website!</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='index112.js') }}"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+   </head>
+    <body>
+	
+		
+		<h1>FLACK</h1>
+		<h2> Welcome {{user}} <h2>
+		
+		
+			<div class="form-group">
+				<label for="exampleFormControlInput1">Enter a user name: </label>
+				<input type="text" class="form-control" id="user_name"   >
+				<br>
+				<button type="submit" class="btn btn-primary" id ="register_user" >Register</button>
+				<button type="submit" class="btn btn-primary" id ="reset_button" >Reset</button>
+			</div>
+			
+		
+		
+		
+		<div id="list_channels" style="border: black solid 1px;
+	margin: 3px;
+	padding: 5px 3px;
+	background-color:lightgreen;
+	float:left;
+	width:20%;">
+		
+		<form >	
+		<div class="form-group">
+			<label for="exampleFormControlSelect2">Channels</label>
+			<select multiple class="form-control" id="listofchannels">
+      
+			</select>
+		</div>
+		<div class="form-group">
+				<input type="text" class="form-control" id="channel_name"  placeholder="Enter a channel name">
+				</div>
+				
+		</form>
+			<!--<ul class="channels" id="listofchannels" > un channel </ul>  -->
+		<button  id ="channel_button" class="btn btn-primary">Create the channel </button>
+		<br>
+		<button  id ="delete_button" class="btn btn-danger">Delete the channel </button>	
+				
+			
+		</div>
+		
+		
+		<div id="messages_container" style="border: black solid 1px;
+	margin: 3px;
+	padding: 5px 3px;
+	background-color:lightblue;
+	width:75%;
+	float:left;">
+			Messages
+			<ul id="listofmessages" style="list-style-type:square;">  
+				
+
+			</ul>
+
+
+		<form>
+			<div class="form-group">
+				<input type="text" class="form-control" id="message"  placeholder="Write a message">
+			</div>
+			
+		</form>
+		<button type="submit" class="btn btn-primary" id ="send_button">Send message </button>
+		
+		</div>
+		
+		
+		
+		
+    </body>
+</html>
